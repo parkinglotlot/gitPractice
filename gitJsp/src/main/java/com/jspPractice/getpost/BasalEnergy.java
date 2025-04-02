@@ -40,10 +40,10 @@ public class BasalEnergy extends HttpServlet {
 		
 		if(checkedSex.equals("male")) {
 			basal = 66.47 + (13.75 * weight) + (5*height) - (6.76 * age);
-			basal = (int)(Math.floor(basal));
+			basal = Math.round(basal*100)/100;
 		}else {
 			basal = 655.1 + (9.56 * weight) + (1.85*height) - (4.68 * age);
-			basal = (int)(Math.floor(basal));
+			basal = Math.round(basal*100)/100;
 		}
 		
 		response.setContentType("text/html; charset=UTF-8");

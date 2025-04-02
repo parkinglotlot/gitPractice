@@ -72,7 +72,7 @@ public class BodyProfile extends HttpServlet {
 		String gender = request.getParameter("gender");
 		double height = Double.parseDouble((request.getParameter("height")));
 		double weight = Double.parseDouble(request.getParameter("weight"));
-		double bmi = Math.round(weight/Math.pow((0.01*height), 2)); 
+		double bmi = Math.round(weight/Math.pow((0.01*height), 2)*100)/100; 
 		
 		request.setAttribute("age", age);
 		request.setAttribute("gender", gender);
